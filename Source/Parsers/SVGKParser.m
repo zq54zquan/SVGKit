@@ -8,7 +8,7 @@
 #import "SVGKParser.h"
 #import <libxml/parser.h>
 
-#import "SVGKParserSVG.h"
+
 
 @class SVGKParserGradient;
 #import "SVGKParserGradient.h"
@@ -128,6 +128,7 @@ SVGKParser* getCurrentlyParsingParser()
 -(void) addDefaultSVGParserExtensions
 {
 	SVGKParserSVG *subParserSVG = [[[SVGKParserSVG alloc] init] autorelease];
+    self.parserSVG = subParserSVG;
 	SVGKParserGradient* subParserGradients = [[[SVGKParserGradient alloc] init] autorelease];
 	SVGKParserPatternsAndGradients *subParserPatternsAndGradients = [[[SVGKParserPatternsAndGradients alloc] init] autorelease];
 	SVGKParserStyles* subParserStyles = [[[SVGKParserStyles alloc] init] autorelease];
