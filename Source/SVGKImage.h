@@ -72,7 +72,6 @@ typedef void (^SVGKImageAsynchronousLoadingDelegate)(SVGKImage* loadedImage);
 @property (nonatomic, retain, readonly) CALayer* CALayerTree;
 #if ENABLE_GLOBAL_IMAGE_CACHE_FOR_SVGKIMAGE_IMAGE_NAMED
 @property (nonatomic, retain, readonly) NSString* nameUsedToInstantiate;
-@property (nonatomic, strong) NSArray *lines;
 #endif
 
 #pragma mark - methods to quick load an SVG as an image

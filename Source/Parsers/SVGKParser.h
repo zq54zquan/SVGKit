@@ -42,7 +42,7 @@
 #import "SVGKParseResult.h"
 
 #import "SVGElement.h"
-@class SVGKParserSVG;
+
 
 
 /*! RECOMMENDED: leave this set to 1 to get warnings about "legal, but poorly written" SVG */
@@ -63,7 +63,7 @@
 @property(nonatomic,retain,readonly) SVGKSource* source;
 @property(nonatomic,retain,readonly) NSMutableArray* externalStylesheets;
 @property(nonatomic,retain,readonly) SVGKParseResult* currentParseRun;
-@property(nonatomic, retain) SVGKParserSVG *parserSVG;
+
 @property(nonatomic,retain) NSMutableArray* parserExtensions;
 @property(nonatomic,retain) NSMutableDictionary* parserKnownNamespaces; /**< maps "uri" to "array of parser-extensions" */
 

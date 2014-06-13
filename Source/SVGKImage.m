@@ -295,11 +295,7 @@ static NSMutableDictionary* globalSVGKImageCache;
 - (id)initWithSource:(SVGKSource *)newSource {
 	NSAssert( newSource != nil, @"Attempted to init an SVGKImage using a nil SVGKSource");
 	
-    SVGKParser* parser = [SVGKParser newParserWithDefaultSVGKParserExtensions:newSource];
-	self = [self initWithParsedSVG:[parser parseSynchronously]];
-    SVGKParserSVG *parserSVG = parser.parserSVG;
-    NSArray *lines = parserSVG.lines;
-    self.lines = lines;
+	self = [self initWithParsedSVG:[SVGKParser parseSourceUsingDefaultSVGKParser:newSource]];
 	if (self) {
 		self.source = newSource;
 	}
