@@ -299,7 +299,7 @@ inline BOOL SVGCurveEqualToCurve(SVGCurve curve1, SVGCurve curve2)
 	[SVGKPointsAndPathsParser readCoordinate:scanner intoFloat:&p.x];
     [SVGKPointsAndPathsParser readCommaAndWhitespace:scanner];
     [SVGKPointsAndPathsParser readCoordinate:scanner intoFloat:&p.y];
-    
+    [SVGKPointsAndPathsParser readCommaAndWhitespace:scanner];
     return p;
 }
 
